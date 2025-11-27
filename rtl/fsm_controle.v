@@ -1,7 +1,10 @@
-//-----------------------------------------------------------------------------
-// Module: fsm_controle
-// Descricao: Maquina de Estados para controle do motor com resfriamento.
-//-----------------------------------------------------------------------------
+//==============================================================================
+// Modulo:   fsm_controle
+// Descricao:
+//   Máquina de Estados Finitos (FSM) para controle de acionamento do motor
+//   com histerese temporal de desligamento (Cooldown).
+//==============================================================================
+
 module fsm_controle (
     input  wire clk,            // Clock principal (50 ou 27 MHz)
     input  wire reset,          // Reset global
@@ -12,14 +15,14 @@ module fsm_controle (
     output reg  [4:0] timer_val // Valor do timer (0 a 20) para display
 );
 
-    // Definicao dos Estados
+    // Codificação dos Estados
     localparam IDLE     = 2'd0; // Esperando sensor
     localparam RUN      = 2'd1; // Motor ligado pelo sensor
     localparam COOLDOWN = 2'd2; // Resfriamento (20s)
 
     reg [1:0] estado_atual, proximo_estado;
     
-    // Logica Sequencial (Mudanca de Estado e Timer)
+    // Lógica Sequencial de Estado e Temporizador
     always @(posedge clk) begin
         if (reset) begin
             estado_atual <= IDLE;
@@ -28,20 +31,18 @@ module fsm_controle (
         else begin
             estado_atual <= proximo_estado;
 
-            // Logica do Timer (Decremento)
+            // Gerenciamento do Timer
             if (estado_atual == COOLDOWN && tick_1hz && timer_val > 0) begin
                 timer_val <= timer_val - 5'd1;
             end
-            // Recarrega timer se estiver em RUN ou IDLE
             else if (estado_atual != COOLDOWN) begin
-                timer_val <= 5'd20; 
+                timer_val <= 5'd20; // Reset do timer fora do cooldown
             end
         end
     end
 
-    // Logica Combinacional (Proximo Estado e Saidas)
+    // Lógica Combinacional de Saída e Próximo Estado
     always @(*) begin
-        // Valores padrao para evitar latches
         proximo_estado = estado_atual;
         motor_on = 1'b0;
 

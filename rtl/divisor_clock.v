@@ -1,23 +1,23 @@
-//-----------------------------------------------------------------------------
-// Module: divisor_clock (Versao Strobe/Pulso)
-// Descricao: Gera um pulso de 1 ciclo de clock (strobe) a cada 1 segundo.
-//            Ideal para habilitar logica em FSMs sincronas.
-//-----------------------------------------------------------------------------
+//==============================================================================
+// Modulo:   divisor_clock
+// Descricao:
+//   Divisor de frequência parametrizável. Gera um pulso de enable (strobe)
+//   com largura de 1 ciclo de clock na frequência de saída desejada.
+//==============================================================================
+
 module divisor_clock (
     input  wire clk_in,
     input  wire rst,
-    output reg  clk_out // Agora e um strobe (pulso curto), nao onda quadrada
+    output reg  clk_out
 );
 
-    // PARA SIMULACAO: Mude este valor para 4
-    // PARA GRAVACAO: Mude este valor para 27000000
+    // Configuração para 1 Hz com clock de entrada de 27 MHz
+    // Para Simulação: Utilizar valor reduzido (ex: 4)
     parameter DIVISOR = 4; 
 
     reg [24:0] counter;
 
-    // Mudança 1: Lista de sensibilidade apenas no Clock (Reset Síncrono)
     always @(posedge clk_in) begin
-        // Mudança 2: Verifica se rst é 1 (Active High)
         if (rst) begin
             counter <= 25'd0;
             clk_out <= 1'b0;
@@ -25,7 +25,7 @@ module divisor_clock (
         else begin
             if (counter == DIVISOR - 1) begin
                 counter <= 25'd0;
-                clk_out <= 1'b1; // Gera o pulso de enable
+                clk_out <= 1'b1; // Strobe
             end
             else begin
                 counter <= counter + 25'd1;

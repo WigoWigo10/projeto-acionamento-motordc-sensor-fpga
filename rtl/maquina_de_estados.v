@@ -1,10 +1,9 @@
-//-----------------------------------------------------------------------------
-// Module: maquina_de_estados (Top-Level Entity)
-//
-// Description:
-// Módulo principal para o Projeto 01 - Controle de Motor DC com Sensor.
-// Integra o divisor de clock, sincronizador de entrada, FSM e decodificadores.
-//-----------------------------------------------------------------------------
+//==============================================================================
+// Module:   maquina_de_estados (Top-Level)
+// Descricao:
+//   Integração dos módulos de controle, sincronização e interface de usuário.
+//==============================================================================
+
 module maquina_de_estados (
     // --- Entradas Físicas (Pinos da FPGA) ---
     input  wire CLOCK_27,      // Clock principal de 27 MHz
@@ -51,7 +50,7 @@ module maquina_de_estados (
         .timer_val(timer_value)    // Envia o valor do tempo para ser decodificado
     );
 
-    // --- 4. Lógica de Exibição Otimizada (Sem Divisores Matemáticos) ---
+    // --- 4. Lógica de Exibição ---
     
     reg [3:0] digito_unidade;
     reg [3:0] digito_dezena;

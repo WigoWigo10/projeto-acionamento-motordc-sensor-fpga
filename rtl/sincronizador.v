@@ -1,8 +1,10 @@
-//-----------------------------------------------------------------------------
-// Module: sincronizador
-// Descricao: Sincroniza um sinal assincrono (sensor) com o clock do sistema
-//            usando dois flip-flops em serie.
-//-----------------------------------------------------------------------------
+//==============================================================================
+// Modulo:   sincronizador
+// Descricao:
+//   Sincronizador de sinal de entrada de duplo estágio para mitigação de
+//   metaestabilidade em domínios de clock assíncronos.
+//==============================================================================
+
 module sincronizador (
     input  wire clk,
     input  wire signal_in,
