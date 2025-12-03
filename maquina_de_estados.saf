@@ -1,0 +1,317 @@
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Signal Activity File Name: "C:/Users/higor/Documents/VSCode/TecHard/projeto-acionamento-motordc-sensor-fpga/maquina_de_estados.saf"
+# Created On: "12/03/2025 17:07:16"
+# Created By: "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition"
+# This file was created by the Quartus(R) II Simulator with glitch filtering disabled.
+
+FORMAT_VERSION 1;
+
+DEFINE_FLAG TOGGLE_RATE_FROM_SIMULATION 0x1;
+DEFINE_FLAG STATIC_PROBABILITY_FROM_SIMULATION 0x2;
+DEFINE_FLAG TOGGLE_RATE_FROM_USER 0x4;
+DEFINE_FLAG STATIC_PROBABILITY_FROM_USER 0x8;
+DEFINE_FLAG TOGGLE_RATE_FROM_USER_DEFAULT 0x10;
+DEFINE_FLAG STATIC_PROBABILITY_FROM_USER_DEFAULT 0x20;
+DEFINE_FLAG TOGGLE_RATE_FROM_VECTORLESS_ESTIMATION 0x40;
+DEFINE_FLAG STATIC_PROBABILITY_FROM_VECTORLESS_ESTIMATION 0x80;
+DEFINE_FLAG TOGGLE_RATE_ASSUMED_ZERO 0x100;
+DEFINE_FLAG TOGGLE_RATE_CLIPPED_TO_MAX 0x200;
+
+BEGIN_OUTPUT_SIGNAL_INFO;
+
+# Output Signal Information Line Format Description:
+
+# <one or more spaces><partial output signal name><spaces>[<flags mask><spaces><toggle rate><spaces><static probability>]<;>
+
+ Add0~0 0x3 2e+006 0.186;
+ Add1~0 0x3 2.8e+006 0.154;
+ Add1~1 0x3 2.8e+006 0.91;
+ Add1~2 0x3 1.6e+006 0.064;
+ Add1~3 0x3 2e+006 0.846;
+ CLOCK_27 0x3 1.996e+008 0.5;
+ HEX0[0] 0x3 1.6e+006 0.064;
+ HEX0[1] 0x3 1.6e+006 0.064;
+ HEX0[2] 0x3 800000 0.032;
+ HEX0[3] 0x3 2.4e+006 0.096;
+ HEX0[4] 0x3 6.4e+006 0.192;
+ HEX0[5] 0x3 2.4e+006 0.128;
+ HEX0[6] 0x3 1.6e+006 0.776;
+ HEX1[0] 0x3 800000 0.16;
+ HEX1[1] 0x3 0 0;
+ HEX1[2] 0x3 1.2e+006 0.686;
+ HEX1[3] 0x3 800000 0.16;
+ HEX1[4] 0x3 800000 0.16;
+ HEX1[5] 0x3 1.2e+006 0.846;
+ HEX1[6] 0x3 1.2e+006 0.314;
+ KEY_RESET 0x3 400000 0.992;
+ LessThan0~0 0x3 2e+006 0.878;
+ LessThan0~1 0x3 2e+006 0.75;
+ LessThan0~2 0x3 1.2e+006 0.686;
+ LessThan1~0 0x3 2.8e+006 0.91;
+ LessThan1~1 0x3 2.4e+006 0.096;
+ LessThan1~2 0x3 800000 0.096;
+ LessThan1~3 0x3 1.2e+006 0.846;
+ LessThan1~4 0x3 800000 0.096;
+ MOTOR_OUT 0x3 800000 0.396;
+ SENSOR_IN 0x3 800000 0.08;
+ digito_dezena[0] 0x3 800000 0.16;
+ digito_unidade[1] 0x3 1.6e+006 0.128;
+ digito_unidade[2] 0x3 1.6e+006 0.128;
+ digito_unidade[3] 0x3 1.6e+006 0.064;
+ digito_unidade~0 0x3 2e+006 0.75;
+ digito_unidade~1 0x3 1.6e+006 0.128;
+ digito_unidade~2 0x3 2.8e+006 0.814;
+ divisor_clock:inst_divisor;
+  Add0~0 0x3 4.96e+007 0.496;
+  Add0~1 0x3 4.96e+007 0.248;
+  Add0~2 0x3 4.96e+007 0.248;
+  Add0~3 0x3 0 0;
+  Add0~4 0x3 0 0;
+  Add0~5 0x3 0 0;
+  Add0~6 0x3 0 0;
+  Add0~7 0x3 0 0;
+  Add0~8 0x3 0 0;
+  Add0~9 0x3 0 0;
+  Add0~10 0x3 0 0;
+  Add0~11 0x3 0 0;
+  Add0~12 0x3 0 0;
+  Add0~13 0x3 0 0;
+  Add0~14 0x3 0 0;
+  Add0~15 0x3 0 0;
+  Add0~16 0x3 0 0;
+  Add0~17 0x3 0 0;
+  Add0~18 0x3 0 0;
+  Add0~19 0x3 0 0;
+  Add0~20 0x3 0 0;
+  Add0~21 0x3 0 0;
+  Add0~22 0x3 0 0;
+  Add0~23 0x3 0 0;
+  Add0~24 0x3 0 0;
+  Add0~25 0x3 0 0;
+  Add0~26 0x3 0 0;
+  Add0~27 0x3 0 0;
+  Add0~28 0x3 0 0;
+  Add0~29 0x3 0 0;
+  Add0~30 0x3 0 0;
+  Add0~31 0x3 0 0;
+  Add0~32 0x3 0 0;
+  Add0~33 0x3 0 0;
+  Add0~34 0x3 0 0;
+  Add0~35 0x3 0 0;
+  Add0~36 0x3 0 0;
+  Add0~37 0x3 0 0;
+  Add0~38 0x3 0 0;
+  Add0~39 0x3 0 0;
+  Add0~40 0x3 0 0;
+  Add0~41 0x3 0 0;
+  Add0~42 0x3 0 0;
+  Add0~43 0x3 0 0;
+  Add0~44 0x3 0 0;
+  Add0~45 0x3 0 0;
+  Add0~46 0x3 0 0;
+  Equal0~0 0x3 4.96e+007 0.248;
+  clk_out 0x3 4.92e+007 0.246;
+  clk_out~0 0x3 4.96e+007 0.248;
+  counter[0] 0x3 9.92e+007 0.496;
+  counter[1] 0x3 4.96e+007 0.496;
+  counter[2] 0x3 0 0;
+  counter[3] 0x3 0 0;
+  counter[4] 0x3 0 0;
+  counter[5] 0x3 0 0;
+  counter[6] 0x3 0 0;
+  counter[7] 0x3 0 0;
+  counter[8] 0x3 0 0;
+  counter[9] 0x3 0 0;
+  counter[10] 0x3 0 0;
+  counter[11] 0x3 0 0;
+  counter[12] 0x3 0 0;
+  counter[13] 0x3 0 0;
+  counter[14] 0x3 0 0;
+  counter[15] 0x3 0 0;
+  counter[16] 0x3 0 0;
+  counter[17] 0x3 0 0;
+  counter[18] 0x3 0 0;
+  counter[19] 0x3 0 0;
+  counter[20] 0x3 0 0;
+  counter[21] 0x3 0 0;
+  counter[22] 0x3 0 0;
+  counter[23] 0x3 0 0;
+  counter[24] 0x3 0 0;
+  counter~0 0x3 0 0;
+  counter~1 0x3 0 0;
+  counter~2 0x3 0 0;
+  counter~3 0x3 0 0;
+  counter~4 0x3 0 0;
+  counter~5 0x3 0 0;
+  counter~6 0x3 0 0;
+  counter~7 0x3 0 0;
+  counter~8 0x3 0 0;
+  counter~9 0x3 0 0;
+  counter~10 0x3 0 0;
+  counter~11 0x3 0 0;
+  counter~12 0x3 0 0;
+  counter~13 0x3 0 0;
+  counter~14 0x3 0 0;
+  counter~15 0x3 0 0;
+  counter~16 0x3 0 0;
+  counter~17 0x3 0 0;
+  counter~18 0x3 0 0;
+  counter~19 0x3 0 0;
+  counter~20 0x3 0 0;
+  counter~21 0x3 0 0;
+  counter~22 0x3 0 0;
+  counter~23 0x3 4.96e+007 0.496;
+  counter~24 0x3 9.92e+007 0.504;
+  counter~25 0x3 0 0;
+  counter~26 0x3 0 0;
+  counter~27 0x3 0 0;
+  counter~28 0x3 0 0;
+  counter~29 0x3 0 0;
+  counter~30 0x3 0 0;
+  counter~31 0x3 0 0;
+  counter~32 0x3 0 0;
+  counter~33 0x3 0 0;
+  counter~34 0x3 0 0;
+  counter~35 0x3 0 0;
+  counter~36 0x3 0 0;
+  counter~37 0x3 0 0;
+  counter~38 0x3 0 0;
+  counter~39 0x3 0 0;
+  counter~40 0x3 0 0;
+  counter~41 0x3 0 0;
+  counter~42 0x3 0 0;
+  counter~43 0x3 0 0;
+  counter~44 0x3 0 0;
+  counter~45 0x3 0 0;
+  counter~46 0x3 0 0;
+  counter~47 0x3 0 0;
+  counter~48 0x3 4.96e+007 0.496;
+  counter~49 0x3 9.96e+007 0.496;
+ fsm_controle:inst_fsm;
+  Add0~0 0x3 4e+006 0.84;
+  Add0~1 0x3 4e+006 0.24;
+  Add0~2 0x3 4e+006 0.08;
+  Add0~3 0x3 2.8e+006 0.138;
+  Add0~4 0x3 2.8e+006 0.958;
+  Add0~5 0x3 1.6e+006 0.096;
+  Add0~6 0x3 2e+006 0.138;
+  Add0~7 0x3 2e+006 0.974;
+  Add0~8 0x3 800000 0.112;
+  Add0~9 0x3 800000 0.744;
+  Equal0~0 0x3 1.2e+006 0.01;
+  LessThan0~0 0x3 4e+006 0.24;
+  LessThan0~1 0x3 4e+006 0.08;
+  LessThan0~2 0x3 2.8e+006 0.958;
+  LessThan0~3 0x3 2.4e+006 0.144;
+  LessThan0~4 0x3 2e+006 0.974;
+  LessThan0~5 0x3 2e+006 0.846;
+  LessThan0~6 0x3 1.2e+006 0.99;
+  LessThan0~7 0x3 800000 0.24;
+  Selector0~0 0x3 1.6e+006 0.008;
+  Selector0~1 0x3 800000 0.604;
+  Selector1~0 0x3 800000 0.076;
+  Selector1~1 0x3 800000 0.08;
+  Selector2~0 0x3 1.6e+006 0.916;
+  Selector2~1 0x3 800000 0.316;
+  always0~0 0x3 1.6e+007 0.08;
+  always0~1 0x3 1.6e+007 0.08;
+  always0~3 0x3 800000 0.316;
+  estado_atual.COOLDOWN 0x3 800000 0.316;
+  estado_atual.COOLDOWN~0 0x3 800000 0.316;
+  estado_atual.IDLE 0x3 800000 0.604;
+  estado_atual.IDLE~0 0x3 800000 0.604;
+  estado_atual.RUN 0x3 800000 0.08;
+  estado_atual.RUN~0 0x3 800000 0.08;
+  estado_atual~0 0x3 800000 0.604;
+  estado_atual~1 0x3 800000 0.08;
+  estado_atual~2 0x3 800000 0.316;
+  estado_atual~3 0x3 1.996e+008 0.5;
+  estado_atual~7 0x3 1.996e+008 0.5;
+  motor_on~0 0x3 800000 0.604;
+  proximo_estado~0 0x3 800000 0.6;
+  proximo_estado~1 0x3 800000 0.084;
+  proximo_estado~2 0x3 800000 0.316;
+  proximo_estado~3 0x3 800000 0.004;
+  proximo_estado~4 0x3 800000 0.076;
+  proximo_estado~5 0x3 800000 0.92;
+  proximo_estado~6 0x3 800000 0.608;
+  proximo_estado~7 0x3 800000 0.08;
+  proximo_estado~8 0x3 800000 0.312;
+  proximo_estado~9 0x3 800000 0.604;
+  proximo_estado~10 0x3 800000 0.084;
+  proximo_estado~11 0x3 800000 0.312;
+  proximo_estado~13 0x3 800000 0.08;
+  timer_val[0] 0x3 8e+006 0.16;
+  timer_val[1] 0x3 4e+006 0.16;
+  timer_val[2] 0x3 2.8e+006 0.814;
+  timer_val[3] 0x3 800000 0.128;
+  timer_val[4] 0x3 1.2e+006 0.75;
+  timer_val~0 0x3 800000 0.756;
+  timer_val~1 0x3 800000 0.128;
+  timer_val~2 0x3 2.4e+006 0.82;
+  timer_val~3 0x3 4e+006 0.16;
+  timer_val~4 0x3 8e+006 0.16;
+  timer_val~5 0x3 800000 0.752;
+  timer_val~6 0x3 800000 0.128;
+  timer_val~7 0x3 2.4e+006 0.816;
+  timer_val~8 0x3 4e+006 0.16;
+  timer_val~9 0x3 8e+006 0.16;
+  timer_val~10 0x3 800000 0.752;
+  timer_val~11 0x3 800000 0.128;
+  timer_val~12 0x3 2.4e+006 0.816;
+  timer_val~13 0x3 4e+006 0.16;
+  timer_val~14 0x3 8e+006 0.16;
+ decodificador_7seg:inst_hex0;
+  Decoder0~0 0x3 1.6e+006 0.712;
+  Decoder0~1 0x3 800000 0.032;
+  Decoder0~2 0x3 1.6e+006 0.032;
+  Decoder0~3 0x3 1.6e+006 0.032;
+  Decoder0~4 0x3 1.6e+006 0.032;
+  Decoder0~5 0x3 800000 0.032;
+  Decoder0~6 0x3 1.6e+006 0.032;
+  Decoder0~7 0x3 1.6e+006 0.032;
+  Decoder0~8 0x3 1.6e+006 0.032;
+  Decoder0~9 0x3 0 0;
+  Decoder0~10 0x3 0 0;
+  Decoder0~11 0x3 0 0;
+  Decoder0~12 0x3 0 0;
+  Decoder0~13 0x3 0 0;
+  Decoder0~14 0x3 0 0;
+  WideOr0 0x3 0 0.224;
+  WideOr1 0x3 0 0.872;
+  WideOr2 0x3 6.4e+006 0.808;
+  WideOr3 0x3 0 0.904;
+  WideOr4 0x3 800000 0.032;
+  WideOr5 0x3 1.6e+006 0.064;
+  WideOr6 0x3 1.6e+006 0.064;
+ decodificador_7seg:inst_hex1;
+  Decoder0~0 0x3 1.2e+006 0.154;
+  Decoder0~1 0x3 800000 0.16;
+  Decoder0~2 0x3 1.2e+006 0.686;
+  Decoder0~3 0x3 0 0;
+  WideOr0 0x3 1.2e+006 0.686;
+  WideOr2 0x3 800000 0.84;
+  WideOr3 0x3 800000 0.84;
+ sincronizador:inst_sync;
+  estagio1 0x3 800000 0.08;
+  signal_out 0x3 800000 0.08;
+
+END_OUTPUT_SIGNAL_INFO;
+
+TOGGLE_PERCENTAGE 53.1599;
+
+PERCENTAGE_OF_TIME_SIGNALS_IN_UNKNOWN_STATE 0;
+

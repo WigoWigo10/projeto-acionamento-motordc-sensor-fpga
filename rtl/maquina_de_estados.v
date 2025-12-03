@@ -23,7 +23,7 @@ module maquina_de_estados (
     wire reset_interno;        // Sinal de reset invertido (para lógica positiva)
 
     // Inverte o reset (Botões da DE1/DE2 são zero quando pressionados)
-    assign reset_interno = ~KEY_RESET;
+    assign reset_interno = ~KEY_RESET; // 0(press) -> 1(reset ativo)
 
 
     // --- 1. Instância do Divisor de Clock (Gera base de tempo de 1s) ---
