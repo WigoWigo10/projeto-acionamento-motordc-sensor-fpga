@@ -13,7 +13,7 @@ module divisor_clock (
 
     // Configuração para 1 Hz com clock de entrada de 27 MHz
     // Para Simulação: Utilizar valor reduzido (ex: 4)
-    parameter DIVISOR = 4; 
+    parameter DIVISOR = 27000000; 
 
     reg [24:0] counter;
 

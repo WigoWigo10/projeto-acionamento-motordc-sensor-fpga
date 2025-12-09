@@ -12,8 +12,17 @@ module maquina_de_estados (
 
     // --- Saídas Físicas (Pinos da FPGA) ---
     output wire MOTOR_OUT,     // Saída para o driver do Motor (GPIO)
+
+    // --- Novos LEDs Indicadores ---
+    output wire LED_SENSOR,    // PIN_R20: Indica estado do Sensor
+    output wire LED_RESET,     // PIN_U22: Indica botão Reset pressionado
+    output wire LED_MOTOR,     // PIN_R17: Indica Motor Ligado
+    
     output wire [6:0] HEX0,    // Display 7-Seg Unidade (Contagem)
-    output wire [6:0] HEX1     // Display 7-Seg Dezena (Contagem)
+    output wire [6:0] HEX1,    // Display 7-Seg Dezena (Contagem)
+
+    output wire [6:0] HEX2,
+    output wire [6:0] HEX3
 );
 
     // --- Sinais Internos (Fios de conexão) ---
@@ -25,6 +34,18 @@ module maquina_de_estados (
     // Inverte o reset (Botões da DE1/DE2 são zero quando pressionados)
     assign reset_interno = ~KEY_RESET; // 0(press) -> 1(reset ativo)
 
+    // 1. LED do Sensor (PIN_R20)
+    assign LED_SENSOR = SENSOR_IN; 
+
+    // 2. LED do Reset (PIN_U22)
+    // Acende apenas enquanto você segura o botão KEY0
+    assign LED_RESET = reset_interno;
+
+    // 3. LED do Motor (PIN_R17)
+    assign LED_MOTOR = MOTOR_OUT;
+
+	assign HEX2 = 7'b1111111;
+    assign HEX3 = 7'b1111111;
 
     // --- 1. Instância do Divisor de Clock (Gera base de tempo de 1s) ---
     divisor_clock inst_divisor (
